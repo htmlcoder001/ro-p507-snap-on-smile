@@ -4,7 +4,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carillas removibles. La historia de salvar una boda.</title>
+    <title>Fațetele detașabile: Povestea salvării unei nunți.</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/roulette.css" type="text/css">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Carillas removibles. La historia de salvar una boda.">
+    <meta property="og:title" content="Fațetele detașabile: Povestea salvării unei nunți.">
 
 
 <style type="text/css">
@@ -101,6 +101,14 @@ a:visited,
         <!-- Header -->
         <style id="font-faces">
             @font-face {
+                font-family: FBDidotS;
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+                src: url("fonts/FBDidotS-Light.woff") format("woff");
+            }
+            
+            @font-face {
                 font-family: VogueAvantGarde;
                 font-weight: 700;
                 font-style: normal;
@@ -128,7 +136,6 @@ a:visited,
         <style>
             .webt-header {
                 box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
-                margin-bottom: 48px;
             }
             .webt-header__top {
                 border-bottom: 1px solid rgb(224, 224, 224);
@@ -176,8 +183,8 @@ a:visited,
             }
             .webt-top__actions {
                 display: block;
-                height: 32px;
-                width: 200px;
+                height: 35px;
+                width: 290px;
                 background-image: url(images/header-actions.png);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -194,9 +201,13 @@ a:visited,
     
                 display: flex;
                 align-items: stretch;
-                justify-content: space-between;
+                justify-content: center;
+                gap: 16px;
             }
-            .webt-nav__link {
+            .webt-nav__link,
+            .webt-nav__link:focus,
+            .webt-nav__link:active {
+                position: relative;
                 white-space: nowrap;
                 display: flex;
                 justify-content: center;
@@ -218,11 +229,44 @@ a:visited,
                 -o-transition: all .3s;
                 transition: all .3s;
             }
+            .--active:after {
+                content: '';
+                background-color: rgb(31, 31, 31);
+                bottom: 0;
+                height: 4px;
+                position: absolute;
+                width: 100%;
+            }
             .webt-nav__link:hover {
                 color: #000;
                 text-decoration: none;
     
                 opacity: 0.8;
+            }
+
+            .webt-subheader {
+                width: 100%;
+                margin-bottom: 48px;
+            }
+            .webt-subheader__head {
+                width: 100%;
+                height: 160px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
+            .webt-head__title {
+                font-size: 64px;
+                font-family: FBDidotS!important;
+                letter-spacing: 0.0416667em;
+                font-weight: 300;
+                margin: 0 auto;
+                display: block;
+            }
+            .webt-subheader__nav {
+                border-top: 1px solid rgb(224, 224, 224);
+                border-bottom: 1px solid rgb(224, 224, 224);
             }
             
             @media (max-width: 960px) {
@@ -233,7 +277,7 @@ a:visited,
                     border-bottom: none;
                 }
             }
-            @media (max-width: 575px) {
+            @media (max-width: 768px) {
                 .webt-top__actions {
                     width: 32px;
                     background-position: right;
@@ -262,20 +306,35 @@ a:visited,
             </div>
             <div class="webt-header__bottom">
                 <nav class="webt-bottom__nav">
-                    <a href="#roulette" class="webt-nav__link">MODA</a>
-                    <a href="#roulette" class="webt-nav__link">BELLEZA</a>
+                    <a href="#roulette" class="webt-nav__link">FASHION</a>
+                    <a href="#roulette" class="webt-nav__link">BEAUTY</a>
+                    <a href="#roulette" class="webt-nav__link">CULTURE</a>
                     <a href="#roulette" class="webt-nav__link">LIVING</a>
-                    <a href="#roulette" class="webt-nav__link">COMPRAS</a>
-                    <a href="#roulette" class="webt-nav__link">PASARELAS</a>
-                    <a href="#roulette" class="webt-nav__link">CELEBRITIES</a>
-                    <a href="#roulette" class="webt-nav__link">TV</a>
-                    <a href="#roulette" class="webt-nav__link">NOVIAS</a>
-                    <a href="#roulette" class="webt-nav__link">VOGUE 365</a>
-                    <a href="#roulette" class="webt-nav__link">BUSINESS</a>
-                    <a href="#roulette" class="webt-nav__link">VOGUE SHOP</a>
+                    <a href="#roulette" class="webt-nav__link">RUNWAY</a>
+                    <a href="#roulette" class="webt-nav__link">SHOPPING</a>
+                    <a href="#roulette" class="webt-nav__link">VIDEO</a>
+                    <a href="#roulette" class="webt-nav__link">VOGUE CLUB</a>
+                    <a href="#roulette" class="webt-nav__link">PHOTOVOGUE</a>
+                    <a href="#roulette" class="webt-nav__link">PODCAST</a>
                 </nav>
             </div>
         </header>
+        <div class="webt-subheader">
+            <div class="webt-subheader__head">
+                <h2 class="webt-head__title">Living</h2>
+            </div>
+            <div class="webt-subheader__nav">
+                <nav class="webt-bottom__nav">
+                    <a href="#roulette" class="webt-nav__link --active">VIEW ALL</a>
+                    <a href="#roulette" class="webt-nav__link">HOMES</a>
+                    <a href="#roulette" class="webt-nav__link">TRAVEL</a>
+                    <a href="#roulette" class="webt-nav__link">FOOD</a>
+                    <a href="#roulette" class="webt-nav__link">WEDDINGS</a>
+                    <a href="#roulette" class="webt-nav__link">PARTIES</a>
+                    <a href="#roulette" class="webt-nav__link">ROYALS</a>
+                </nav>
+            </div>
+        </div>
         <!-- // Header -->
         
         <div id="content" class="site-content fixed main-content-font">
@@ -284,49 +343,49 @@ a:visited,
                     <main id="main" class="site-main article-card">
                         <article id="post-58" class="article-post post-58 post type-post status-publish format-standard has-post-thumbnail category-zarabotki category-rejtingi">
                             <div class="entry-content" itemprop="articleBody">
-                                <h2 class="entry-title" itemprop="headline">Carillas removibles. La historia de salvar una boda.</h2>
+                                <h2 class="entry-title" itemprop="headline">Fațetele detașabile: Povestea salvării unei nunți.</h2>
                                 <img src="images/pics/Pic1.jpeg" alt="" class="webt-article-img">
                                 <br>
-                                <p>Nerea y Rodrigo soñaban tanto con tener la boda perfecta que querían que todo fuera impecable, incluido su aspecto y especialmente sus sonrisas en las fotos.</p>
-                                <p>Se dieron cuenta de que sus dientes no tenían el aspecto que querían y decidieron ir al dentista. Desgraciadamente, el dentista les informó de que sus dientes necesitaban un tratamiento largo, que no solo llevaría mucho tiempo, sino que también afectaría considerablemente al presupuesto de la aún no oficial familia.</p>
-                                <p><b>Nerea y Rodrigo se sintieron decepcionados, porque quedaba poco tiempo antes de la boda y todos los gastos ya estaban previstos.</b></p>
-                                <p>Empezaron a buscar métodos alternativos, durante los cuales consideraron muchas opciones diferentes. Tras una larga y dolorosa búsqueda de una salida, dieron con las carillas removibles, que eran más rápidas, baratas e indoloras que otras opciones similares. Tras consultar con su dentista, decidieron probar este método.</p>
-                                <p><b>Tras seguir unos sencillos pasos, nuestros héroes probaron sus primeras carillas removibles y quedaron literalmente asombrados por el resultado.</b></p>
+                                <p>Oana și Emanuel visau atât de mult la o nuntă perfectă, încât încercau să facă totul impecabil, inclusiv aspectul lor, mai ales zâmbetele lor în fotografii.</p>
+                                <p>Ei au observat că dinții lor nu arată așa cum și-ar dori și au decis să meargă la dentist. Din păcate, dentistul le-a spus că modificarea danturii necesită un tratament lung, care nu numai că ar dura mult timp, dar ar afecta și bugetul familiei, încă neoficială.</p>
+                                <p><b>Oana și Emanuel au fost dezamăgiți, pentru că timpul până la nuntă era limitat, iar toate cheltuielile erau deja planificate.</b></p>
+                                <p>Ei au început să caute metode alternative și au luat în considerare multe opțiuni diferite. După o lungă și chinuitoare căutare a unei soluții pentru situația creată, ei au dat peste fațetele detașabile, care erau mai rapide și mai ieftine decât variantele similare, și în plus erau fără durere. Consultându-se cu medicul lor stomatolog, ei au decis să încerce această metodă.</p>
+                                <p><b>Parcurgând câțiva pași simpli, mirii noștri au încercat primele lor fațete detașabile și au fost literalmente uimiți de rezultat.</b></p>
                                 <img src="images/pics/Pic2.jpeg" alt="" class="webt-article-img">
                                 <br/>
-                                <p>Sus sonrisas tenían un aspecto precioso, como si acabaran de someterse a un complicado tratamiento en el dentista. Nuestra pareja estaba muy contenta de haber elegido este método porque era rápido, barato e indoloro. Gracias a su nueva sonrisa, empezaron a sentirse más seguros y relajados.</p>
+                                <p>Zâmbetele lor arătau minunat, de parcă tocmai ar fi finalizat un tratament complicat la dentist. Cuplul a fost foarte mulțumit de această metodă, pentru că a fost rapidă, ieftină și pentru că procedura nu a durut deloc. Împreună cu noul zâmbet, ei au început să se simtă mai încrezători și mai relaxați.</p>
                                 <img src="images/pics/Pic3.jpeg" alt="" class="webt-article-img">
                                 <br/>
-                                <p>En la boda, todo el mundo estaba encantado con sus sonrisas y recibieron muchos elogios por sus hermosas sonrisas. Nerea y Rodrigo estaban muy agradecidos por la solución más rápida, barata e indolora posible para ayudarles a conseguir la sonrisa perfecta. Se sintieron más seguros y cómodos durante la boda y en la sesión de fotos.</p>
+                                <p>La nuntă toți invitații au fost încântați de aspectul lor și au primit multe complimente pentru frumoasele lor zâmbete. Oana și Emanuel au fost foarte recunoscători pentru soluția rapidă, ieftină și nedureroasă care i-a ajutat să obțină zâmbetul perfect. Ei s-au simțit încrezători și confortabili în timpul nunții și ședinței foto.</p>
                                 <img src="images/pics/Pic4.jpeg" alt="" class="webt-article-img">
                                 <br/>
-                                <p>Después de la boda, Nerea y Rodrigo siguieron utilizando sus carillas removibles. Les resultó muy cómodo, ya que podían quitarse las carillas cada vez que lo desearan o necesitaran. Además, las carillas removibles no causaban molestias y podían llevarlas todo el día.</p>
-                                <p><b>Con el paso del tiempo, Nerea y Rodrigo comenzaron a notar que empezaban a sentirse más seguros, su nueva sonrisa les ayudaba a verse mejor y sentirse más atractivos. Notaron que la gente empezaba a prestarles más atención y recibían más cumplidos.</b></p>
-                                <p>Nuestros héroes estaban tan contentos con el resultado que recomendaron a sus amigos y conocidos que probaran las carillas removibles para mejorar su sonrisa. Están convencidos de que fue la mejor elección que podían haber hecho para conseguir una sonrisa perfecta sin el importante tiempo y dinero que sin duda habrían tenido que invertir en un tratamiento dental.</p>
-                                <p><b>El uso de carillas removibles ayudó a Nerea y Rodrigo no solo a conseguir la sonrisa perfecta en el principal acontecimiento de su vida, sino que también resultó ser una forma estupenda de aumentar su confianza y atractivo, lo que repercutirá positivamente en sus futuras y, sin duda, felices vidas.</b></p>
+                                <p>După nuntă, Oana și Emanuel au continuat să folosească fațetele detașabile. Ei au descoperit că această metodă era foarte convenabilă, deoarece puteau să le scoată oricând doreau sau aveau nevoie. În plus, fațetele detașabile nu le cauzau disconfort și le puteau purta fără probleme.</p>
+                                <p><b>Cu timpul, Oana și Emanuel și-au dat seama că aveau mai multă încredere în ei, noul lor zâmbet îi ajuta să arate mai bine și să se simtă mai atractivi. Ei au observat că oamenii au început să le acorde mai multă atenție și au primit mai multe complimente.</b></p>
+                                <p>Cuplul nostrui a fost atât de mulțumit de rezultat, încât le-au recomandat prietenilor și cunoștințelor să încerce fațetele detașabile pentru a-și îmbunătăți zâmbetul. Ei sunt siguri că aceasta este cea mai bună alegere pentru a obține zâmbetul perfect fără cheltuieli semnificative de timp și bani, care ar fi fost necesare pentru tratamentul la dentist.</p>
+                                <p><b>Utilizarea fațetelor detașabile i-a ajutat pe Oana și Emanuel să obțină nu numai zâmbetul perfect la cel mai important eveniment al vieții lor, dar a fost și un mijloc excelent de a-și îmbunătăți încrederea și atractivitatea, ceea ce va avea un impact pozitiv asupra vieții lor viitoare și, fără îndoială, asupra fericirii lor.</b></p>
                                 <img src="images/pics/Pic6.jpeg" alt="" class="webt-article-img">
                                 <br/>
-                                <p>Las carillas removibles son una de las formas más rápidas, indoloras y asequibles de conseguir la sonrisa perfecta, lo cual es especialmente importante tanto para quienes planean una boda u otro acontecimiento importante en el que la apariencia es de especial importancia, como para las personas con determinados problemas dentales.</p>
+                                <p>Fațetele detașabile reprezintă una dintre cele mai rapide, nedureroase și accesibile metodede a obține zâmbetul perfect, ceea ce este foarte important atât pentru cei care planifică o nuntă sau alt eveniment major, unde aspectul este foarte important, cât și pentru oamenii cu anumite probleme dentare.</p>
                                 <img src="images/pics/Pic5.jpeg" alt="" class="webt-article-img">
                                 <br/>
-                                <p>Las carillas removibles son tan fáciles y cómodas de usar que quedará realmente sorprendido por este invento que es , sin duda, uno de los mejores de la humanidad.</p>
+                                <p>Este atât de simplu și convenabil să folosești fațetele detașabile, încât vei fi cu adevărat șocat de această metodă. Fațetele detașabile sunt, fără îndoială, una dintre cele mai bune invenții ale omenirii.</p>
                                 <img src="images/pics/Pic7.png" alt="" class="webt-article-img">
                                 <br/>
-                                <p><b>Además, las carillas removibles se pueden utilizar para corregir diversos defectos dentales como dientes desiguales, dientes de forma irregular, dientes con esmalte irregular y un sinfín de problemas más.</b></p>
+                                <p><b>În plus, fațetele detașabile pot fi folosite pentru corectarea defectelor dentare, precum  dinții strâmbi, dinții cu formă neregulată, dinții cu smalț neuniform și multe alte probleme.</b></p>
                                 <div class="blur1 webt-article-img">
                                     <img src="images/pics/Collage.jpg" style=" width:100%; max-width: 600px;display:block;margin:0 auto" class="blur">
                                 </div>
                                 <br/>
-                                <p><b>En general, el uso de carillas removibles es una gran alternativa a los costosos y largos tratamientos dentales, ya que le permiten conseguir la sonrisa perfecta de forma rápida, indolora y con un desembolso económico mínimo.</b></p>
+                                <p><b>În general, utilizarea fațetelor detașabile este o alternativă excelentă în detrimentul tratamentului dentar scump și lung, permițând obținerea zâmbetului perfect rapid, nedureros și cu costuri financiare minime.</b></p>
                                 
                                 <h3 style="text-align:center;display: block; margin: 0.5em 0px; line-height: 1.2; font-weight: bold; text-transform: uppercase;font-size: 18px;">
-                                    A PROPÓSITO PARA NUESTROS LECTORES PUBLICAMOS EL FORMULARIO OFICIAL DE PEDIDO DE SNAP-ON SMILE.
+                                    ÎN SPECIAL PENTRU CITITORII NOȘTRI, PUBLICĂM FORMULARUL OFICIAL DE COMANDĂ SNAP-ON SMILE.
                                 </h3>
                                 <center>
                                     <div class="ruletka-p" id="roulette">
-                                        <h2>¡ATENCIÓN! ¡Cuidado con falsificaciones!</h2>
-                                        <p>Se puede recibir el artículo en el territorio de España con un descuento de 50% solo
-                                            <a href="#roulette" class="ruletka-a">en caso de rellenar el formulario oficial de pedido</a>.</p>
+                                        <h2>ATENȚIUNE! Feriți-vă de falsuri!</h2>
+                                        <p>Puteți obține fatetele detasabile în România cu o reducere de 50% numai dacă completați
+                                            <a href="#roulette" class="ruletka-a">formularul oficial de comandă</a>.</p>
                                     </div>
                                     <div class="card spin-wrapper" id="bags__sales" style="display:none">
                                         <div class="card__instructions">
@@ -580,15 +639,15 @@ a:visited,
                                         <div><img src="images/prod.png"></div>
                                         <p class="price"> 
                                             <br>
-                                            <del style="font-size:22px;">98 &euro;</del>
+                                            <del style="font-size:22px;">370 lei</del>
                 
                                             <span class="price_red" style="font-size: 30px;
                                             color: red;
                                             margin-left: 15px;
-                                            font-weight: 700;">49 &euro;</span>
+                                            font-weight: 700;">185 lei</span>
                                     </p>
-                                        <h3>Sólo tienes que introducir tu nombre y número de teléfono.
-                                            ¡Date prisa! Te queda tiempo:<br><span class="time_remains" id="min">30</span> : <span class="time_remains" id="sec">00</span></h3>
+                                        <h3>Tot ce trebuie să faceți este să introduceți numele și numărul de telefon.
+                                            <br/>Grăbește-te! Mai ai timp:<br><span class="time_remains" id="min">30</span> : <span class="time_remains" id="sec">00</span></h3>
                                         <!-----------------------  --------------------------->
                                         <form method="post" class="main-order-form" id="order_form" geo="pl" action="api.php" 
 	onsubmit="return validate_form(this, 'Sprawdź, czy wprowadzone dane są poprawne');">
@@ -599,16 +658,29 @@ a:visited,
 										
                                             <div class="input-group tooltip-hide">
                                                 <input type="text" class="input-roulette" name="name" id="input-name" 
-												placeholder="Nombre" required>
+												placeholder="Introduceți numele dvs" required>
                                             </div>
                                             <div class="input-group tooltip-hide">
                                                 <input type="tel" class="input-roulette" name="phone" id="input-phone" 
-												placeholder="Teléfono (móvil activo)" required>
+												placeholder="Telefon (mobil activ)" required>
                                             </div>                                        
-                                            <button class="submit-roulette" style="width: 250px;">OBTENER</button>
+                                            <button class="submit-roulette" style="width: 250px;">COMANDĂ</button>
+                                            <p class="footnote1">Criptarea este utilizată pentru a garanta protecția datelor dvs.</p>
 											</form>
                                         <!-----------------------  --------------------------->
                                     </div>
+                                    <style>
+                                        .main-content-font p.footnote1 {
+                                            line-height: 15px!important;
+                                            text-indent: 0!important;
+                                            font-size: 10px!important;
+                                            margin: 10px 0 0!important;
+                                            text-align: center!important;
+                                            padding: 0!important;
+                                            color: #888!important;
+                                            border-bottom: none!important;
+                                        }
+                                    </style>
                                     <div class="spin-result-wrapper">
                                         <div class="pop-up-window">
                                             <div class="close-popup"></div>
@@ -807,7 +879,7 @@ a:visited,
                         <div class="vk-container" style="float: none">
                             <div class="vk-header">
                                 <div class="vk-logo"></div>
-                                <div class="vk-header-text"><span class="comment-count">194 comentarios desde hoy</span></div>
+                                <div class="vk-header-text"><span class="comment-count">194 comentarii astăzi</span></div>
                             </div>
                             <div class="vk-container">
                                 <div class="vk-container">
@@ -819,14 +891,14 @@ a:visited,
                                                     <img src="./images/like.png" alt="">
                                                     4
                                                 </div>
-                                                <p class="user_name">Irene D.</p>
-                                                <p class="text"> ¡Perfecto! ¡Vaya transformación! Necesito carillas lo más pronto posible, también tengo problemas con dientes.</p>
+                                                <p class="user_name">Ioana D.</p>
+                                                <p class="text"> Perfect! Ce transformare! Am nevoie de aceste fațete urgent, am probleme mari cu dinții.</p>
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă</p>
                                             </div>
                                         </div>
                                         <div class="comment">
@@ -837,42 +909,42 @@ a:visited,
                                                     <img src="./images/heart.png" alt="">
                                                 </div>
                                                 <p class="user_name">Elena</p>
-                                                <p class="text">También me pedí las carillas Snap-On Smile, es perfecto! Y no hace falta pedir un crédito, hacía mucho que quería tener los dientes blancos.</p>
+                                                <p class="text">Am comandat fațetele Snap-On Smile și totul este perfect! Și asta fără să cer un împrumut. Sunt foarte multumita deoarece am visat mereu să am dinți albi.</p>
                                                 <img src="images/g1.jpg">
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă</p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/3.1.jpg">
                                             <div class="comm_text">
                                                 <p class="user_name">María</p>
-                                                <p class="text">¡Sí! La sonrisa bonita cambia mucho a la gente. Me preocupa el estado de mis dientes y no tengo dinero para curarlos. Nadie piensa en la gente, piden mucho dinero a la gente estos dentistas. Menos mal que inventaron esto, son postizas, pero enseguida te transforman. ¡Qué belleza!</p>
+                                                <p class="text">Da! Un zâmbet frumos schimbă foarte mult oamenii. Sunt îngrijorată de starea dinților mei și nu am bani pentru tratamentul lor. Nimeni nu se gândește la oameni, acești stomatologi cer oamenilor mulți bani. Slavă Domnului că sa inventat așa ceva, nu sunt ca dinții adevărați dar te transformă imediat. Superb!</p>
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă</p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/4.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Celia</p>
-                                                <p class="text">Me pedí las carillas postizas. Me llamaron de la representación oficial en España para detallar la dirección de entrega. Mañana debo recibirlas.</p>
+                                                <p class="user_name">Mihaela</p>
+                                                <p class="text">Am comandat fețetele și eu. Am primit un telefon de la reprezentanța oficială din România pentru a clarifica adresa de livrare. Trebuie să le primesc mâine.</p>
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă</p>
                                             </div>
                                         </div>
                                         <div class="comment">
@@ -882,15 +954,15 @@ a:visited,
                                                     <img src="./images/like.png" alt="">
                                                     3
                                                 </div>
-                                                <p class="user_name">Julia D.</p>
-                                                <p class="text">Yo también las pedí, todos piensan que tengo carillas de verdad.</p>
+                                                <p class="user_name">Simona C.</p>
+                                                <p class="text">Le-am comandat și eu, toată lumea crede că am dantura adevărata.</p>
                                                 <img src="images/g2.jpg">
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora</p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă</p>
                                             </div>
                                         </div>
                                         <div class="comment">
@@ -900,45 +972,45 @@ a:visited,
                                                     <img src="./images/like.png" alt="">
                                                     <img src="./images/heart.png" alt="">
                                                 </div>
-                                                <p class="user_name">Ana Martínez</p>
-                                                <p class="text">¡Qué guay! ¡También las quiero!</p>
+                                                <p class="user_name">Ana Ionela</p>
+                                                <p class="text">Ce tare! Și eu le vreau!</p>
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/7.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Sofía Nieto</p>
-                                                <p class="text">Es lo que necesito para salir. No las uso todos los días, solo en ocasiones.</p>
+                                                <p class="user_name">Sofia Crisan</p>
+                                                <p class="text">Exact ceea de ce am nevoie! Nu le voi purta permanent, doar ocazional.</p>
                         
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/8.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Sandra Solía</p>
-                                                <p class="text">Las uso todos los días, ya no me imagino cómo es vivir sin carillas.</p>
+                                                <p class="user_name">Ana Maria</p>
+                                                <p class="text">Le folosesc în fiecare zi, nu-mi pot imagina deja viața fără ele.</p>
                                                 <img src="images/g3.jpg">
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
@@ -948,102 +1020,102 @@ a:visited,
                                                     <img src="./images/like.png" alt="">
                                                     5
                                                 </div>
-                                                <p class="user_name">Juan</p>
-                                                <p class="text">Has ahorrado bien. Yo también quería hacerme los dientes perfectos, pero me pidieron más de mil EUR solo por un puente. No lo hice, sigo sin dientes, soy hombre y no pasa nada, pero una mujer sin dientes por supuesto es horroroso.</p>
+                                                <p class="user_name">Ion</p>
+                                                <p class="text">Prețul e tare buna. Am vrut să-mi pun dinții la stomatolog și eu, dar numai pentru pod au cerut mai mult de o mie de euro. Am rămas fără dinți. Hai ca eu ca bărbat încă mai pot trai fara dantura, dar la femei se privește foarte groaznic.</p>
                         
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/10.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Nuria</p>
-                                                <p class="text">Anteriormente ya había pedido las carillas de otra empresa, recibí algo chino y de mala calidad. Y estas Snap-On Smile son guay, originales, se ajustan perfectamente, no tienen sabor de plástico. Me gustan, se ponen fácilmente.</p>
+                                                <p class="user_name">Daniela</p>
+                                                <p class="text">Am comandat fațete de la o altă companie, și am primit plastic Chinezesc de jucarii. Iar aceste fatete Snap-On Smile sunt bune, originale, stau perfect, nu au gust de plastic. Îmi plac!</p>
                         
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/11.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Natalia C.</p>
-                                                <p class="text">Ni siquiera he soñado de tener sonrisa tan bonita. ¡Muchas gracias por Su historia!</p>
+                                                <p class="user_name">Natalia S.</p>
+                                                <p class="text">Nici măcar nu am visat să am un zâmbet atât de frumos. Vă mulțumesc foarte mult pentru tot!</p>
                                                 <img src="images/g4.jpg">
                         
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/12.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Amalia</p>
-                                                <p class="text">¡Es magia! Gracias al que inventó estas carillas.</p>
+                                                <p class="user_name">Alina</p>
+                                                <p class="text">Magie! Mulțumesc celui care a inventat aceste furnire.</p>
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/13.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Anabela</p>
-                                                <p class="text">Por este dinero enseguida compré varias, por si se estropean, para tener unas de repuesto.</p>
+                                                <p class="user_name">Claudia</p>
+                                                <p class="text">La așa preț am decis sa cumpăr mai multe perechi, în cazul în care se rup să am altele de rezervă.</p>
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/14.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Leonor Pérez</p>
-                                                <p class="text">Snap-On Smile — es una empresa estadounidense conocida. Son carillas de calidad, con frecuencia tienen promociones. Y otras empresas producen falsificaciones.</p>
+                                                <p class="user_name">Victor Roșca</p>
+                                                <p class="text">Snap-On Smile este o companie americană binecunoscută. Acestea sunt furnire de înaltă calitate, sunt adesea supuse promoțiilor. Și alte firme produc falsuri.</p>
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <div class="comment">
                                             <img class="avatar" src="images/15.jpg">
                                             <div class="comm_text">
-                                                <p class="user_name">Martina Rodríguez</p>
-                                                <p class="text">¡Qué bonita estás, Ana! ¡Os deseo divertirse en la boda!</p>
+                                                <p class="user_name">Martina Balan</p>
+                                                <p class="text">Acum sunt oferite cu reducere, am avut noroc, le-am cumpărat mai devreme și mai scumpe când nu a existat nicio promoție...</p>
                                             </div>
                                             <div class="down-menu">
-                                                <p class="down-menu-like">Me gusta</p>
-                                                <p class="down-menu-answer none">Contestar</p>
-                                                <p class="down-menu-translate none">Traducir</p>
-                                                <p class="time"> Hace más de una hora </p>
+                                                <p class="down-menu-like">Apreciază</p>
+                                                <p class="down-menu-answer none">Răspunde</p>
+                                                <p class="down-menu-translate none">Traduceți</p>
+                                                <p class="time"> O oră în urmă </p>
                                             </div>
                                         </div>
                                         <br>
-                                        <a class="knopka" href="#form" style="display:block; max-width:400px; margin:0 auto">PEDIR <br>SNAP-ON SMILE</a>
+                                        <a class="knopka" href="#form" style="display:block; max-width:400px; margin:0 auto">COMANDĂ <br>SNAP-ON SMILE</a>
                                         <br>&nbsp;<br>
                                     </div>
                                 </div>
@@ -1056,20 +1128,20 @@ a:visited,
                 <aside id="secondary" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
                     <div class="sticky-sidebar js-sticky-sidebar">
                         <div id="wpshop_widget_articles-9" class="widget widget_wpshop_widget_articles">
-                            <div class="widget-header">Entradas recientes</div>
+                            <div class="widget-header">Publicări recente</div>
                             <div class="widget-articles">
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
-                                                <source srcset="images/1234.jpg" type="image/jpg">
-                                                <img alt="img" width="335" height="220" src="images/1234.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded">
+                                                <source srcset="images/news-1.jpg" type="image/jpg">
+                                                <img alt="img" width="335" height="220" src="images/news-1.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded">
                                             </picture>
                                         </a>
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">El judo terapéutico en niños con trastornos neurológicos: "Ver cómo evolucionan es una alegría constante"</a>
+                                            <a href="#roulette" class="scrollto">Cutremurele puternice au dezvăluit secretele nucleului interior al Pământului</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">23</span>
@@ -1087,7 +1159,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Voluntariado para ayudar a cuidar el planeta</a>
+                                            <a href="#roulette" class="scrollto">Deveniți voluntar pentru a vă ajuta să aveți grijă de planetă</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">4</span>
@@ -1098,14 +1170,14 @@ a:visited,
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
-                                                <source srcset="images/1236.jpg" type="image/jpg">
-                                                <img alt="img" loading="lazy" width="335" height="220" src="images/1236.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="28">
+                                                <source srcset="images/news-2.jpg" type="image/jpg">
+                                                <img alt="img" loading="lazy" width="335" height="220" src="images/news-2.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="28">
                                             </picture>
                                         </a>
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Archivo - Arxiu - Una dona repostant en una gasolinera Las gasolineras se preparan para autoexcluirse de la obligación por parte del Gobierno de colocar cargadores para eléctricos</a>
+                                            <a href="#roulette" class="scrollto">Oamenii de știință au depistat cât timp trebuie să cheltuiți pentru activitatea fizică</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">51</span>
@@ -1123,7 +1195,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Ilse Bing: pionera de la fotografía, entre la abstracción y el movimiento</a>
+                                            <a href="#roulette" class="scrollto">Ilse Bing: pionier al fotografiei între abstractizare și mișcare</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">13</span>
