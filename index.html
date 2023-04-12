@@ -1176,7 +1176,7 @@ a:visited,
                         
                     </main>
                 </div>
-                <aside id="secondary" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
+                <aside id="js_sidebar" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
                     <div class="sticky-sidebar js-sticky-sidebar">
                         <div id="wpshop_widget_articles-9" class="widget widget_wpshop_widget_articles">
                             <div class="widget-header">Publicări recente</div>
@@ -1270,7 +1270,16 @@ a:visited,
 
 
 <link rel="stylesheet" href="css/enhancer_all_style.css">
-
+    <script src="js/sticky-sidebar.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+        var a = new StickySidebar('#js_sidebar', {
+            topSpacing: 20,
+            bottomSpacing: 20,
+            containerSelector: '.site-content-inner',
+            innerWrapperSelector: '.sticky-sidebar'
+        });
+    </script>
     <script src="js/script.js"></script>
     <script>
         $('a[href^="#"]').click(function (){
